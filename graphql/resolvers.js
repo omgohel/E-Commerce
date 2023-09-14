@@ -7,6 +7,7 @@ const resolvers = {
         const users = await User.findAll();
         return users;
       } catch (error) {
+        console.log(error); 
         throw new Error("Error fetching users");
       }
     },

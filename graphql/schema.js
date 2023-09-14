@@ -5,6 +5,14 @@ const typeDefs = gql`
     id: ID!
     name: String!
     email: String!
+    password: String!
+    phone_no: String!
+    age: Int!
+    address: String!
+    pincode: Int!
+    city: String!
+    state: String!
+    country: String!
   }
 
   type Query {

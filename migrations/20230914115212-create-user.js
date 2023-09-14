@@ -7,16 +7,48 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
-      name: {
-        type: Sequelize.STRING
+      name:{
+        type: Sequelize.STRING(100),
+        allowNull: false,
       },
       email: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(100),
+        unique: true,
+        allowNull: false,
       },
       password: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(150),
+        allowNull: false,
+      },
+      phone_no: {
+        type: Sequelize.STRING(15),
+        allowNull: false,
+      },
+      age: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+      },
+      address: {
+        type: Sequelize.STRING(200),
+        allowNull: false,
+      },
+      pincode: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+      },
+      city: {
+        type: Sequelize.STRING(100),
+        allowNull: false,
+      },
+      state: {
+        type: Sequelize.STRING(100),
+        allowNull: false,
+      },
+      country: {
+        type: Sequelize.STRING(100),
+        allowNull: false,
       },
       createdAt: {
         allowNull: false,
