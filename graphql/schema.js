@@ -6,13 +6,18 @@ const typeDefs = gql`
     name: String!
     email: String!
     password: String!
-    phone_no: String!
-    age: Int!
-    address: String!
-    pincode: Int!
-    city: String!
-    state: String!
-    country: String!
+    phone_no: String
+    age: Int
+    address: String
+    pincode: Int
+    city: String
+    state: String
+    country: String
+    isVerified: Int
+    isEmailVerified: Boolean
+    token: String
+    createdAt: String
+    updatedAt: String
   }
 
   type Query {

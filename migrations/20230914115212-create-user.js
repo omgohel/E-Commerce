@@ -24,40 +24,52 @@ module.exports = {
       },
       phone_no: {
         type: Sequelize.STRING(15),
-        allowNull: false,
+        allowNull: true,
       },
       age: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: true,
       },
       address: {
         type: Sequelize.STRING(200),
-        allowNull: false,
+        allowNull: true,
       },
       pincode: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: true,
       },
       city: {
         type: Sequelize.STRING(100),
-        allowNull: false,
+        allowNull: true,
       },
       state: {
         type: Sequelize.STRING(100),
-        allowNull: false,
+        allowNull: true,
       },
       country: {
         type: Sequelize.STRING(100),
-        allowNull: false,
+        allowNull: true,
+      }, isVerified: {
+        type: Sequelize.SMALLINT,
+        defaultValue: 0,
+      },
+      isEmailVerified: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
+      },
+      token: {
+        type: Sequelize.STRING(100),
+        allowNull: true,
       },
       createdAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.DATE
-      }
+      },
+     
     });
   },
   async down(queryInterface, Sequelize) {

@@ -34,32 +34,45 @@ module.exports = (sequelize, DataTypes) => {
       },
       phone_no: {
         type: DataTypes.STRING(15),
-        allowNull: false,
+        allowNull: true,
       },
       age: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: true,
       },
       address: {
         type: DataTypes.STRING(200),
-        allowNull: false,
+        allowNull: true,
       },
       pincode: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: true,
       },
       city: {
         type: DataTypes.STRING(100),
-        allowNull: false,
+        allowNull: true,
       },
       state: {
         type: DataTypes.STRING(100),
-        allowNull: false,
+        allowNull: true,
       },
       country: {
         type: DataTypes.STRING(100),
-        allowNull: false,
+        allowNull: true,
       },
+      isVerified: {
+        type: DataTypes.SMALLINT,
+        defaultValue: 0,
+      },
+      isEmailVerified: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+      },
+      token: {
+        type: DataTypes.STRING(100),
+        allowNull: true,
+      },
+      
     },
     {
       sequelize,
