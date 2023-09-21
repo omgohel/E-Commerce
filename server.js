@@ -1,8 +1,10 @@
 const express = require("express");
 const { ApolloServer } = require("apollo-server-express");
 const { sequelize } = require("./models");
-const typeDefs = require("./graphql/schema");
-const resolvers = require("./graphql/resolvers");
+// const typeDefs = require("./graphql/schema");
+// const resolvers = require("./graphql/resolvers");
+const {typeDefs} = require("./graphql/typeDefs/index")
+const {resolvers} = require("./graphql/resolvers/index")
 
 const app = express();
 const PORT = process.env.PORT || 3000;
