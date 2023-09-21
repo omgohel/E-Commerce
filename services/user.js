@@ -22,3 +22,28 @@ exports.getAllUsers = async () => {
     );
   }
 };
+exports.createUser = async (__root, input) => {
+  try {
+    const user = await User.findOne({ where: { email: input.email } });
+    if (user) {
+      return failure(
+        "USER_ALREADY_EXIST",
+        httpsStatusCodes.NOT_FOUND,
+        httpResponses.NOT_FOUND
+      );
+    }
+    const response = await User.create(input);
+    return success(
+      "USERS_SUCCESSFULLY_CREATED",
+      response,
+      httpsStatusCodes.SUCCESS
+    );
+  } catch (err) {
+    return failure(
+      "SOME_ERR_OCCUR_WHILE_CREATING_USERS",
+      httpsStatusCodes.INTERNAL_SERVER_ERROR,
+      httpResponses.INTERNAL_SERVER_ERROR,
+      err
+    );
+  }
+};
