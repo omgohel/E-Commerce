@@ -5,6 +5,7 @@ const { sequelize } = require("./models");
 // const resolvers = require("./graphql/resolvers");
 const {typeDefs} = require("./graphql/typeDefs/index")
 const {resolvers} = require("./graphql/resolvers/index")
+//nothing
 
 const app = express();
 const PORT = process.env.PORT || 3000;
